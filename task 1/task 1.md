@@ -59,3 +59,15 @@
 { "_id" : ObjectId("61ad22f9f088440024fc57db"), "message" : "35", "tailed_path" : "/var/log-in/id2/data", "time" : ISODate("2021-12-05T20:37:13.661Z") }
 { "_id" : ObjectId("61ad22f9f088440024fc57dc"), "message" : "35", "tailed_path" : "/var/log-in/id2/data", "time" : ISODate("2021-12-05T20:37:13.661Z") }
 ```
+
+---
+
+## Web client
+
+### Logs of id1 sensor
+
+![id1](./images/id1.png)
+
+### Logs of id2 sensor
+
+![id2](./images/id2.png)
