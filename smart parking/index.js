@@ -1,6 +1,7 @@
 const express = require("express");
 const {MongoClient} = require("mongodb");
 const path = require('path');
+require('dotenv').config()
 
 function shutdown(client, server) 
 {
@@ -27,7 +28,7 @@ async function main()
 		console.log("Server is running on http://localhost:3000");
 	});
 
-	const uri = "mongodb+srv://IoT-Lab:iotlab@cluster0.tolfr.mongodb.net/Demo?retryWrites=true&w=majority";
+	const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.tolfr.mongodb.net/Demo?retryWrites=true&w=majority`;
 	
 	const client = new MongoClient(uri);
 	

@@ -1,7 +1,9 @@
 # Libraries
 import RPi.GPIO as GPIO
 import time
+import os
 from pymongo import MongoClient
+from dotenv import load_dotenv
 
 #GPIO Mode (BOARD / BCM)
 GPIO.setmode(GPIO.BCM)
@@ -43,7 +45,10 @@ def distance():
 	return Distance
 
 if __name__ == '__main__':
-	client = MongoClient('mongodb+srv://RaspberryPI:iotlab@cluster0.tolfr.mongodb.net/Demo?retryWrites=true&w=majority')
+	# Load config from a .env file:
+	load_dotenv()
+	MONGODB_URI = os.environ['MONGODB_URI']
+	client = MongoClient(MONGODB_URI)
 	db = client.get_database("Demo")
 	collection = db.get_collection("Timestamp")
 	try:
