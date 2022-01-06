@@ -28,7 +28,7 @@ async function main()
 		console.log("Server is running on http://localhost:3000");
 	});
 
-	const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.tolfr.mongodb.net/ParkingData?retryWrites=true&w=majority`;
+	const uri = process.env.MONGODB_URI
 	
 	const client = new MongoClient(uri);
 	
