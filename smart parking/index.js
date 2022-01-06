@@ -13,7 +13,7 @@ function shutdown(client, server)
 
 async function getLastEntry(client)
 {
-	const result = await client.db("Demo").collection("Timestamp").find().sort({$natural: -1}).limit(1).next();
+	const result = await client.db("ParkingData").collection("ParkingData").find().sort({$natural: -1}).limit(1).next();
 	return result;
 } 
 
@@ -28,7 +28,7 @@ async function main()
 		console.log("Server is running on http://localhost:3000");
 	});
 
-	const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.tolfr.mongodb.net/Demo?retryWrites=true&w=majority`;
+	const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.tolfr.mongodb.net/ParkingData?retryWrites=true&w=majority`;
 	
 	const client = new MongoClient(uri);
 	
