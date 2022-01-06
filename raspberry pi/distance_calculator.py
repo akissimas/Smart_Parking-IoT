@@ -49,8 +49,8 @@ if __name__ == '__main__':
 	load_dotenv()
 	MONGODB_URI = os.environ['MONGODB_URI']
 	client = MongoClient(MONGODB_URI)
-	db = client.get_database("Demo")
-	collection = db.get_collection("Timestamp")
+	db = client.get_database("ParkingData")
+	collection = db.get_collection("ParkingData")
 	try:
 		parked_flag = False
 		while True:
@@ -63,7 +63,7 @@ if __name__ == '__main__':
 				# Send local time to db.
 				print ("\nMeasured Distance = {:.1f} cm".format(dist))
 				print ("Local time: ", local_time)
-				data = { "parking_id" : 0, "parked" : parked_flag, "timestamp" : local_time }
+				data = { "parking_id" : 1, "parked" : parked_flag, "timestamp" : local_time }
 				x = collection.insert_one(data)
 				
 			elif (dist > 50 and parked_flag == True):
@@ -73,7 +73,7 @@ if __name__ == '__main__':
 				# Send local time to db.
 				print ("\nMeasured Distance = {:.1f} cm".format(dist))
 				print ("Local time: ", local_time)
-				data = { "parking_id" : 0, "parked" : parked_flag, "timestamp" : local_time }
+				data = { "parking_id" : 1, "parked" : parked_flag, "timestamp" : local_time }
 				x = collection.insert_one(data)
 				
 			time.sleep(1)
