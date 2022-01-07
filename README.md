@@ -1,12 +1,8 @@
 # Smart Parking - IoT
 
----
-
 ## Summary
 
 The project we chose is about Smart Parking, with the use of a sonar and a Raspberry PI we can determine if a car is parked at a certain location.
-
----
 
 ## Hardware Prerequisites
 
@@ -29,8 +25,6 @@ For the project we need:
 </p>
 
 We need the resistances to create a voltage divider, so that the Sonar and the Raspberry PI can work correctly.
-
----
 
 ## Software Requirements
 
