@@ -14,12 +14,40 @@ body {
 }
 
 header {
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between; /*horizontal*/
+  align-items: center; /*vertical*/
+}
+
+main {
+  padding-top: 100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+@media (max-width: 1072px) {
+  header {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+  }
+
+  #logo {
+    margin-left: 0px;
+  }
 }
 
 #logo {
-  vertical-align: auto;
-  text-align: left;
   margin-left: 50px;
 }
 
@@ -28,17 +56,7 @@ header {
   color: #950740;
   text-shadow: 2px 2px #6f2232;
   font-size: 70px;
-  float: none;
-  position: absolute;
-  margin: 0px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-main {
   text-align: center;
-  margin-top: 150px;
 }
 
 #parking_id {
@@ -46,9 +64,3 @@ main {
   font-weight: bold;
   font-size: 30px;
 }
-
-@media screen and (max-width: 800px) {
-    .left, .main, .right {
-      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
-    }
-  }
