@@ -39,7 +39,7 @@ python3 -m pip install -r requirements.txt
 You can install the NodeJs module with this command:
 
 ```bash
-npm init
+npm install
 ```
 
 ## Brief Description
