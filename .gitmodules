@@ -1,0 +1,3 @@
+[submodule "IoT-Parking-App"]
+	path = IoT-Parking-App
+	url = https://github.com/DaGryk/IoT-Parking-App.git
