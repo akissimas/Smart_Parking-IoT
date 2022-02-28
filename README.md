@@ -57,3 +57,25 @@ npm install
 	Fig.2 Architecture
 </p>
 
+
+## How to Run the Project
+
+- Step 1. Download the project as a zip, or simply clone the git repository.
+- Step 2. Configure your Raspberry Pi.
+- Step 3. Set-up your Breadboard with the Raspberry Pi.
+- Step 4. Install all the Python libraries with this command: 
+	```bash
+	python3 -m pip install -r requirements.txt```
+- Step 5. Install on your Raspberry Pi or on your PC NodeJS.
+- Step 6. Install all the necessary packages for NodeJS with this command:
+	```bash
+	npm install
+	```
+- Step 7. Create an account for MongoDB Atlas at https://www.mongodb.com/atlas/database.
+- Step 8. Create a Cluster and a Database at MongoDB Atlas.
+- Step 9. Set-up enviroment passwords for your Database, both for your NodeJS file and the Python file.
+- Step 10. Download the Android project, or simply clone the git repository from here .
+- Step 11. Go to the MainActivity.java and at line 27, change the current IP address to your IP adress and port you will be using.
+- Step 12. First run the Python file. After that you run the NodeJS file, finally you can run the Android Studio. 
+- Step 13. You can open the webpage or the Android Studio to see if the changes actually come through. 
+
