@@ -67,7 +67,7 @@ npm install
 	```bash
 	python3 -m pip install -r requirements.txt
 	```
-- Step 5. Install on your Raspberry Pi or on your PC NodeJS.
+- Step 5. Install NodeJS on your Raspberry Pi or on your PC, you can download it from here https://nodejs.org/en/.
 - Step 6. Install all the necessary packages for NodeJS with this command:
 	```bash
 	npm install
